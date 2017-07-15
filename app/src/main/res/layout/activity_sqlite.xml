@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jerryvu.jerrysproject.SQliteActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="Reserve Your iPhone"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="25sp"/>
+
+    <EditText
+        android:id="@+id/idName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="NAME"/>
+
+    <EditText
+        android:id="@+id/idiPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="iPhone"/>
+
+    <EditText
+        android:id="@+id/idPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price"/>
+
+    <Button
+        android:id="@+id/idBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ENTER"/>
+
+    <GridLayout
+        android:id="@+id/sqlite_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:rowCount="3"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/Animation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAnimation"
+            android:text="Home Page"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Listview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnListview"
+            android:text="iPhone List"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Checkbox_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnCheckbox"
+            android:text="Choose iPhone(s)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQliteRead_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQliteRead"
+            android:text="Status"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Viewpager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnViewpager"
+            android:text="Infopager"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickExit"
+            android:text="ExitDialog"
+            android:textAllCaps="false" />
+
+    </GridLayout>
+
+</LinearLayout>

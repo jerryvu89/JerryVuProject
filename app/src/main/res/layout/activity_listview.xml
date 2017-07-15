@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jerryvu.jerrysproject.ListviewActivity">
+
+    <TextView
+        android:id="@+id/Listview_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Listview"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/Listview_tv"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listview_product"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:dividerHeight="10dp"
+            android:divider="#d1d1d1">
+        </ListView>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:id="@+id/listview_bottom"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:id="@+id/Animation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAnimation"
+            android:text="Home Page"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Checkbox_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnCheckbox"
+            android:text="Choose iPhone(s)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQlite_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQlite"
+            android:text="Reserve iPhone"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQliteRead_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQliteRead"
+            android:text="Status"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Viewpager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnViewpager"
+            android:text="Infopager"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickExit"
+            android:text="ExitDialog"
+            android:textAllCaps="false" />
+
+
+    </GridLayout>
+
+</RelativeLayout>

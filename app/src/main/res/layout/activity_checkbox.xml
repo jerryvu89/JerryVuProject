@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jerryvu.jerrysproject.CheckboxActivity">
+
+    <TextView
+        android:id="@+id/Checkbox_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkbox"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/Checkbox_tv"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone4 16GB"
+            android:id="@+id/checkBox1"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone4S 16GB"
+            android:id="@+id/checkBox2"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone5 16GB"
+            android:id="@+id/checkBox3"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone5S 16GB"
+            android:id="@+id/checkBox4"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone6 16GB"
+            android:id="@+id/checkBox5"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone6S 16GB"
+            android:id="@+id/checkBox6"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone7 16GB"
+            android:id="@+id/checkBox7"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone7S 16GB"
+            android:id="@+id/checkBox8"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone8 16GB"
+            android:id="@+id/checkBox9"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple iPhone8S 16GB"
+            android:id="@+id/checkBox10"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select"
+            android:id="@+id/buttonselect"
+            android:onClick="ClickMe"
+            android:layout_centerHorizontal="true"/>
+
+    </LinearLayout>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:id="@+id/checkbox_bottom"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:id="@+id/Animation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAnimation"
+            android:text="Home Page"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Listview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnListview"
+            android:text="iPhone List"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQlite_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQlite"
+            android:text="Reserve iPhone"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQliteRead_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQliteRead"
+            android:text="Status"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Viewpager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnViewpager"
+            android:text="Infopager"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickExit"
+            android:text="ExitDialog"
+            android:textAllCaps="false" />
+
+    </GridLayout>
+
+</RelativeLayout>

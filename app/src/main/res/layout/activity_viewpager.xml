@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jerryvu.jerrysproject.ViewpagerActivity">
+
+    <TextView
+        android:id="@+id/Viewpager_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Viewpager"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+    
+    <com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager
+        android:id="@+id/horizontal_cycle"
+        app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+        app:icvp_scroll_duration="250"
+        app:icvp_center_page_scale_offset="30dp"
+        app:icvp_min_page_scale_offset="5dp"
+        app:icvp_max_page_scale="0.8"
+        app:icvp_min_page_scale="0.55"
+        app:icvp_medium_scaled="false"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@+id/Viewpager_tv">
+    </com.gigamole.infinitecycleviewpager.HorizontalInfiniteCycleViewPager>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:id="@+id/viewpager_bottom"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:id="@+id/Animation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAnimation"
+            android:text="Home Page"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Listview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnListview"
+            android:text="iPhone List"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Checkbox_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnCheckbox"
+            android:text="Choose iPhone(s)"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQlite_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQlite"
+            android:text="Reserve iPhone"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/SQliteRead_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnSQliteRead"
+            android:text="Status"
+            android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clickExit"
+            android:text="ExitDialog"
+            android:textAllCaps="false" />
+
+    </GridLayout>
+
+</RelativeLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jerryvu.jerrysproject.GestureActivity">
+
+    <TextView
+        android:id="@+id/Gesture_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gesture"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"/>
+
+    <GridLayout
+        android:orientation="horizontal"
+        android:id="@+id/gesture_bottom"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:useDefaultMargins="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:paddingLeft="50dp">
+
+        <Button
+            android:id="@+id/Animation_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnAnimation"
+            android:text="Animation"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/Listview_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnListview"
+            android:text="Listview"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/clickExit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnCustomDialog"
+            android:text="CustomDialog"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Checkbox_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnCheckbox"
+            android:text="Checkbox"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/Viewpager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="btnViewpager"
+            android:text="Viewpager"
+            android:textAllCaps="false" />
+
+    </GridLayout>
+
+    <ImageView
+        android:layout_below="@+id/Gesture_tv"
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:srcCompat="@drawable/gesturearrow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Swipe right to left to CustomDialog"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/Gesture_tv"
+        android:layout_alignEnd="@+id/Gesture_tv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Swipe left to right to Animation"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignStart="@+id/Gesture_tv" />
+
+</RelativeLayout>

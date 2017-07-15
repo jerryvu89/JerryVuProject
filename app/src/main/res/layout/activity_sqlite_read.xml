@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jerryvu.jerrysproject.SQliteReadActivity">
+
+        <Button
+            android:id="@+id/idBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Resvervations"/>
+
+        <TextView
+            android:scrollbars="vertical"
+            android:layout_below="@+id/idBtn"
+            android:id="@+id/idResult"
+            android:layout_width="match_parent"
+            android:layout_height="425dp"
+            android:textSize="25sp"/>
+
+                <GridLayout
+                    android:id="@+id/viewpager_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:layout_alignParentBottom="true"
+                    android:columnCount="3"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:rowCount="3"
+                    android:useDefaultMargins="true">
+
+                        <Button
+                            android:id="@+id/Animation_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="btnAnimation"
+                            android:text="Home Page"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/Listview_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="btnListview"
+                            android:text="iPhone List"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/Checkbox_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="btnCheckbox"
+                            android:text="Choose iPhone(s)"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/SQlite_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="btnSQlite"
+                            android:text="Reserve iPhone"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:id="@+id/Viewpager_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="btnViewpager"
+                            android:text="Infopager"
+                            android:textAllCaps="false" />
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="clickExit"
+                            android:text="ExitDialog"
+                            android:textAllCaps="false" />
+
+                </GridLayout>
+
+</RelativeLayout>
