@@ -63,6 +63,7 @@ public class ViewpagerActivity extends AppCompatActivity {
 
     private void initData() {
         lstImages.add(R.drawable.drawingb);
+        lstImages.add(R.drawable.drawingr);
         lstImages.add(R.drawable.drawingg);
         lstImages.add(R.drawable.applebackground);
     }
