@@ -39,7 +39,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_2,name);
         contentValues.put(COL_3,iPhone);
-        contentValues.put(COL_4, price);
+        contentValues.put(COL_4,price);
         long result = db.insert(TABLE_NAME,null,contentValues);
         db.close();
 
@@ -55,6 +55,27 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("Select * from " + TABLE_NAME, null);
         return res;
+    }
+
+    // This method updates the data
+    public boolean updateData(String id, String name, String iPhone, String price){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2,name);
+        contentValues.put(COL_3,iPhone);
+        contentValues.put(COL_4,price);
+        int result = db.update(TABLE_NAME, contentValues, "ID =?",new String[]{id});
+        if(result>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    // This method deletes the data
+    public Integer deleteData(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, "ID=?",new String[]{id});
     }
 
 }

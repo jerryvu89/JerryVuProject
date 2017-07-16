@@ -17,7 +17,8 @@ public class SQliteReadActivity extends AppCompatActivity {
 
     DataBaseHelper myDb;
     TextView txtResult;
-    Button btnClick;
+    Button btnClick, btnClick2;
+    EditText txtId;
 
     Button btnViewpagerActivity;
     Button btnListviewActivity;
@@ -30,12 +31,20 @@ public class SQliteReadActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sqlite_read);
         myDb = new DataBaseHelper(this);
+        txtId = (EditText) findViewById(R.id.idID);
         txtResult = (TextView) findViewById(R.id.idResult);
         btnClick = (Button) findViewById(R.id.idBtn);
         btnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ClickMe();
+            }
+        });
+        btnClick2 = (Button) findViewById(R.id.idBtn2);
+        btnClick2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClickMe2();
             }
         });
 
@@ -83,6 +92,12 @@ public class SQliteReadActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this,"No Reservation Data to Retrieve", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void ClickMe2(){
+        String id = txtId.getText().toString();
+        int result = myDb.deleteData(id);
+        Toast.makeText(this, result + " Reservation deleted", Toast.LENGTH_SHORT).show();
     }
 
     // This will enable scrolling with the textview
